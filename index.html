@@ -64,7 +64,7 @@
     <article id="post-你好，亲爱滴宝贝！" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/06/16/你好，亲爱滴宝贝！/" class="article-date">
-  <time datetime="2017-06-16T04:55:32.000Z" itemprop="datePublished">2017-06-16</time>
+  <time datetime="2017-06-16T08:24:32.000Z" itemprop="datePublished">2017-06-16</time>
 </a>
     
   </div>
@@ -87,7 +87,230 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/16/你好，亲爱滴宝贝！/" data-id="cj3zerivy0000hcqy1ez7ezzd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/16/你好，亲爱滴宝贝！/" data-id="cj3zlck3b0001isqy4v51hbcy" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-手把手教从零开始在GitHub上使用Hexo搭建博客教程一" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/16/手把手教从零开始在GitHub上使用Hexo搭建博客教程一/" class="article-date">
+  <time datetime="2017-06-16T08:22:54.000Z" itemprop="datePublished">2017-06-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/16/手把手教从零开始在GitHub上使用Hexo搭建博客教程一/">手把手教从零开始在GitHub上使用Hexo搭建博客教程一</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>手把手教GitHub+Hexo博客搭建<br>前言</p>
+<p>有朋友问了我关于博客系统搭建相关的问题，由于是做开发相关的工作，我给他推荐的是使用github的gh-pages服务搭建个人博客。</p>
+<p>推荐理由：</p>
+<p>免费：github提供gh-pages服务是免费的，有300MB空间；<br>开源：由于github开源的原因，有很多人参与其中，自然技术支持很好。<br>便捷：博客完全托管在github上，基本上不需要花时间去管理，博客使用Markdown语法，上手很容易。<br>需要了解的内容（能掌握更好）：</p>
+<p>html+css+javascript<br>git基本语法<br>markdown语法<br>nodejs<br>目前，在github上搭建博客系统使用最多就是Hexo和Jekyll。<br>Hexo是基于Nodejs开发的，Jekyll是基于Ruby开发的。</p>
+<p>通过两个系统使用的比较，个人习惯喜欢Hexo，所以本文介绍的是Hexo搭建博客，如果你对Jekyll也有兴趣，可自行学习。</p>
+<p>说明：<br>文中出现的命令，Windows用户注意，命令前面有 $ 的表示在Git Bash中执行，没有的在CMD命令窗口执行。<br>Linux和MAC系统在终端下不区分。<br>安装Git客户端</p>
+<p>已安装过的用户略过<br>下载Git客户端：下载地址</p>
+<p>Git客户端安装<br>安装Git客户端：Windows用户直接Next就可以了。Mac和Linxu系统的用户可通过命令方式安装，这里不详细介绍了。<br>注册GitHub</p>
+<p>老手和已注册过的用户略过<br>打开GitHub官网：<a href="https://github.com/" target="_blank" rel="external">https://github.com/</a><br>填写注册信息进行注册操作：没有登录的用户打开网站首页就会显示注册的操作（如图所示），或者是点击Sign up按钮进入注册详情页。</p>
+<p>GitHub注册<br>填写好注册信息，点击Sign up for GitHub(注册)按钮后，接下来是选择协议部分。根据自己的情况选择相关的协议，一般人选的都是免费的那一项。<br>创建仓库</p>
+<p>登录github账号：在github首页点击Sign in按钮进入登录页面。填写用户名或邮箱和密码，点击Sign in按钮登录。</p>
+<p>登录GitHub<br>点击创建仓库：点击在登录的用户图像左边的+号和下三角符号按钮。</p>
+<p>点击创建仓库<br>填写创建仓库信息：<br>仓库名称必须是用户名.github.io（别问我为什么，人家就是这样规定的），比如我的用户名是SeayXu，就是SeayXu.github.io。</p>
+<p>填写创建仓库信息<br>填写好相关信息，点击Create repository(创建仓库)按钮。<br>配置SSH</p>
+<p>老手和已配置过的用户略过<br>打开Git Bash终端：在桌面右键，会出现”Git Bash here”的选项，点击即可。<br>设置user name和email：<br>$ git config –global user.name “你的GitHub用户名”<br>$ git config –global user.email “你的GitHub注册邮箱”<br>生成ssh密钥:输入下面命令<br>$ ssh-keygen -t rsa -C “你的GitHub注册邮箱”<br>一般情况下是不需要密码的，所以，接下来直接回车就好。<br>此时，在用户文件夹下就会有一个新的文件夹.ssh，里面有刚刚创建的ssh密钥文件id_rsa和id_rsa.pub。<br>注：id_rsa文件是私钥，要妥善保管，id_rsa.pub是公钥文件。<br>添加公钥到github：<br>点击用户头像，然后点击显示的Settings(设置)选项；</p>
+<p>Settings</p>
+<p>在用户设置栏，点击SSH and GPG keys选项，然后点击New SSH key(新建SSH)按钮；</p>
+<p>SSH and GPG keys</p>
+<p>将id_rsa.pub中的内容复制到Key文本框中，然后点击Add SSH key(添加SSH)按钮；</p>
+<p>Add SSH keys<br>测试SSH：<br>$ ssh -T git@github.com<br>接下来会出来下面的确认信息：<br>The authenticity of host ‘github.com (207.97.227.239)’ can’t be established.<br>RSA key fingerprint is 17:24:ac:a5:76:28:24:36:62:1b:36:4d:eb:df:a6:45.<br>Are you sure you want to continue connecting (yes/no)?<br>输入yes后回车。<br>然后显示如下信息则OK(其中的SeayXu是用户名)。<br>Hi SeayXu! You’ve successfully authenticated,<br>but GitHub does not provide shell access.<br>以上是准备工作。</p>
+<p>创建博客文件夹</p>
+<p>新建博客文件夹：这里就取名为blog。<br>mkdir blog<br>进入到blog文件夹：<br>cd blog # 切换到blog目录<br>初探Hexo</p>
+<p>如果没有安装Nodejs，请先安装Nodejs，Nodejs官网；<br>以下操作是在blog文件夹中。<br>安装Hexo</p>
+<p>npm install hexo-cli -g<br>hexo全局安装一次就够了，后面可以直接使用hexo相关的操作。<br>初始化Hexo</p>
+<p>hexo init<br>安装依赖<br>npm install<br>启动Hexo<br>hexo server<br>启动之后，打开浏览器，在地址栏输入：<a href="http://localhost:4000，你会看到Hexo的示例页面。" target="_blank" rel="external">http://localhost:4000，你会看到Hexo的示例页面。</a><br>注：此时可以初始化git本地仓库了，或者是等本地博客搭建好之后也可以。</p>
+<p>再探Hexo</p>
+<p>新建文章：<br>hexo new <title><br>此时在source_posts文件夹中便会多出一个文档”title.md”.<br>如果要删除，直接在此文件夹下删除对应的文件即可。<br>生成静态页面<br>hexo generate<br>生成的静态内容在public文件夹内。<br>清除生成内容<br>hexo clean<br>执行此操作会删除public文件夹中的内容。<br>部署Hexo<br>hexo deploy<br>该操作会将hexo生成的静态内容部署到配置的仓库中，请看下面介绍。<br>部署Hexo</title></p>
+<p>编辑配置文件，关联远程仓库：<br>在编辑器中打开Hexo配置文件_config.yml，找到下面内容：</p>
+<h1 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h1><h2 id="Docs-https-hexo-io-docs-deployment-html"><a href="#Docs-https-hexo-io-docs-deployment-html" class="headerlink" title="Docs: https://hexo.io/docs/deployment.html"></a>Docs: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">https://hexo.io/docs/deployment.html</a></h2><p>deploy:<br>type:<br>添加github仓库信息：</p>
+<h1 id="Deployment-1"><a href="#Deployment-1" class="headerlink" title="Deployment"></a>Deployment</h1><h2 id="Docs-https-hexo-io-docs-deployment-html-1"><a href="#Docs-https-hexo-io-docs-deployment-html-1" class="headerlink" title="Docs: https://hexo.io/docs/deployment.html"></a>Docs: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">https://hexo.io/docs/deployment.html</a></h2><p>deploy:<br>type: git<br>repo: git@github.com:SeayXu/seayxu.github.io.git #github仓库地址<br>branch: master # github分支<br>注意：type、repo、branch的前面有两个空格，后面的:后面有一个空格<br>安装git插件</p>
+<p>npm install hexo-deployer-git –save<br>如果没有安装git插件，会有错误提示，安装后重新部署就可以了。<br>部署</p>
+<p>hexo deploy<br>如果没有意外，部署就成功了，可以打开 http://&lt;用户名&gt;.github.io 查看。</p>
+<p>hexo命令缩写</p>
+<p>hexo g：hexo generate<br>hexo c：hexo clean<br>hexo s：hexo server<br>hexo d：hexo deploy<br>hexo命令组合</p>
+<p>hexo clean &amp;&amp; hexo g -s，就是清除、生成、启动<br>hexo clean &amp;&amp; hexo g -d，就是清除、生成、部署<br>本文简单介绍Hexo的部署，接下来的文章会介绍Hexo的相关配置。</p>
+<p>报错总结</p>
+<p>ERROR Deployer not found: git 或者 ERROR Deployer not found: github</p>
+<p>解决方法： npm install hexo-deployer-git –save</p>
+<p>如发生报错： ERROR Process failed: layout/.DS_Store , 那么进入主题里面layout和_partial目录下，使用删除命令：</p>
+<p>rm-rf.DS_Store</p>
+<p>ERROR Plugin load failed: hexo-server</p>
+<p>原因：</p>
+<p>Besides,utilities are separated into a standalone module.hexo.util is not reachable anymore.</p>
+<p>解决方法，执行命令：</p>
+<p>sudo npm install hexo-server</p>
+<p>执行命令hexo server，提示：Usage: hexo ….</p>
+<p>原因：</p>
+<p>我认为是没有生成本地服务</p>
+<p>解决方法，执行命令：</p>
+<p>npm install hexo-server –save</p>
+<p>提示：hexo-server@0.1.2 node_modules/hexo-server</p>
+<p>….</p>
+<p>表示成功了参考</p>
+<p>这个时候再执行：</p>
+<p>hexo-server</p>
+<p>得到:</p>
+<p>INFOHexois running at <a href="http://0.0.0.0:4000/.PressCtrl+C" target="_blank" rel="external">http://0.0.0.0:4000/.PressCtrl+C</a> to stop.</p>
+<p>这个时候再点击<a href="http://0.0.0.0:4000，正常情况下应该是最原始的画面，但是我看到的是：" target="_blank" rel="external">http://0.0.0.0:4000，正常情况下应该是最原始的画面，但是我看到的是：</a></p>
+<p>白板和Cannot GET / 几个字</p>
+<p>原因：</p>
+<p>由于2.6以后就更新了，我们需要手动配置些东西，我们需要输入下面三行命令：</p>
+<p>npm install hexo-renderer-ejs –save</p>
+<p>npm install hexo-renderer-stylus –save</p>
+<p>npm install hexo-renderer-marked –save</p>
+<p>这个时候再重新生成静态文件，命令：</p>
+<p>hexo generate（或hexo g）</p>
+<p>启动本地服务器：</p>
+<p>hexo server（或hexo s）</p>
+<p>再，点击网址<a href="http://0.0.0.0:4000OK终于可以看到属于你自己的blog啦，??，虽然很简陋，但好歹有了一个属于自己的小窝了。参考链接，本地已经简单的设置好了，但是现在域名和服务器都是基于自己的电脑，接下来需要跟github进行关联。" target="_blank" rel="external">http://0.0.0.0:4000OK终于可以看到属于你自己的blog啦，??，虽然很简陋，但好歹有了一个属于自己的小窝了。参考链接，本地已经简单的设置好了，但是现在域名和服务器都是基于自己的电脑，接下来需要跟github进行关联。</a></p>
+<p>主题推荐</p>
+<p>这里有大量的主题列表使用方法里面</p>
+<p>都有详细的介绍，我就不多说了。</p>
+<p>我这里有几款个人认为不错的主题，免去你们，一个一个的选了，欢迎吐槽我的审美，??</p>
+<p>Cover- A chic theme with facebook-like cover photo</p>
+<p>Oishi- A white theme based on Landscape plus and Writing.</p>
+<p>Sidebar- Another theme based on Light with a simple sidebar</p>
+<p>TKL- A responsive design theme for Hexo. 一个设计优雅的响应式主题</p>
+<p>Tinnypp- A clean, simple theme based on Tinny</p>
+<p>Writing- A small and simple hexo theme based on Light</p>
+<p>Yilia- Responsive and simple style 优雅简洁响应式主题，我用得就是这个。</p>
+<p>Pacman voidy- A theme with dynamic tagcloud and dynamic snow</p>
+<p>一些基本路径</p>
+<p>文章在source/_posts, 文章支持Markdown语法，可以使用一些MarkDown渲染工具。如果想修改头像可以直接在主题的_config.yml文件里面修改，友情链接，之类的都在这里。开始打理你的博客吧，有什么问题或者建议，都可以提出来，我会继续完善的。</p>
+<p>修改头像</p>
+<p>我当前的路径/Users/leopard/blog/themes/yilia，ls 你可以看到</p>
+<p>Gruntfile.js    _config.yml package.json</p>
+<p>README.md  layout      source</p>
+<p>vim _config.yml 进去，找到 #你的头像url avatar: 后接一个URL就行了，头像就修改成功了</p>
+<p>修改主题和作者名字</p>
+<p>我当前的路径/Users/leopard/blog，ls 你可以看到</p>
+<p>_config.yml  node_modules    public      source      themes</p>
+<p>db.json        package.json     scaffolds   ssh-keygen</p>
+<p>vim _config.yml 进去，找到 author: 潘柏信，修改成你自己的名字就行了</p>
+<p>修改主题，然后继续往下找到</p>
+<h1 id="Extensions"><a href="#Extensions" class="headerlink" title="Extensions"></a>Extensions</h1><h2 id="Plugins-http-hexo-io-plugins"><a href="#Plugins-http-hexo-io-plugins" class="headerlink" title="Plugins: http://hexo.io/plugins/"></a>Plugins: <a href="http://hexo.io/plugins/" target="_blank" rel="external">http://hexo.io/plugins/</a></h2><h2 id="Themes-http-hexo-io-themes"><a href="#Themes-http-hexo-io-themes" class="headerlink" title="Themes: http://hexo.io/themes/"></a>Themes: <a href="http://hexo.io/themes/" target="_blank" rel="external">http://hexo.io/themes/</a></h2><p>theme:yilia</p>
+<p>改成theme: yilia，theme:后面接你自己的主题名字就行了,然后分别执行</p>
+<p>部署 hexo g</p>
+<p>提交 hexo d</p>
+<p>你的主题，和名字就修改成功了</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/16/手把手教从零开始在GitHub上使用Hexo搭建博客教程一/" data-id="cj3zlck3i0002isqyx91j43mg" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo搭建博客-GitHub/">Hexo搭建博客,GitHub</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hexo博客更换主题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/16/hexo博客更换主题/" class="article-date">
+  <time datetime="2017-06-16T05:31:55.000Z" itemprop="datePublished">2017-06-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/16/hexo博客更换主题/">hexo博客更换主题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>主题 Hexo<br>之前用hexo搭建完博客之后，发现官方默认的主题太丑，反正是不太符合我的审美了，好像我的审美也不咋滴o(╯□╰)o</p>
+<p>既然主题不好看，那就得换一套，实在不行也可以自己改改样式。</p>
+<p>改称自己喜欢的样子，这里不做过多讨论。</p>
+<p>那么问题就简单了，选一套符合自己口味的主题，然后更换。</p>
+<p>第一步：选择主题</p>
+<p>主题从哪里找呢？官方就有提供了一些 主题 ，可以从中选择。</p>
+<p>官方提供的主题不少，可是并不一定有自己喜欢的或者又很难选择，这是个头疼的问题。</p>
+<p>之前我的博客主题就是随便选了一个还算看的过去的。</p>
+<p>但是再使用的过程中发现了一些问题：</p>
+<p>不会自动生成目录<br>不能自动获取摘要<br>有很多配置不太方便<br>虽然有些问题，但并不影响整体使用，所以也没想去换主题了。</p>
+<p>前端时间逛知乎，发现这样一个问题： 有哪些好看的 Hexo 主题？</p>
+<p>查看第一名的答案，有个主题排行，发现排第一名的主题 next 。</p>
+<p>然后点开主题看了一下，发现主题简约，配置详细，能够解决我之前存在的问题，于是就决定选择这个主题了。</p>
+<p>第二步：安装主题</p>
+<p>Hexo 有两份主要的配置文件（_config.yml），一份位于站点根目录下，另一份位于主题目录下。为了描述方便，在以下说明中，将前者称为 站点配置文件，后者称为 主题配置文件。</p>
+<p>Hexo 安装主题的方式非常简单，只需要将主题文件放置于站点目录的 themes 目录下，然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。</p>
+<p>下载 NexT 主题</p>
+<p>下载NexT主题稳定版：</p>
+<p>前往 NexT 版本 发布页面<br>选择你所需要的版本，下载 Download 下的 Source Code (zip) 到本地。 例如，下载 v0.4.0 版本：<br>解压所下载的压缩包至站点的 themes 目录下，并将 解压后的文件夹名称（ hexo-theme-next-0.4.0 ）更改为 next<br>启用NexT主题</p>
+<p>克隆/下载 完成后，打开 站点配置文件，找到 theme 字段，并将其值更改为 next 。</p>
+<p>验证主题是否启用</p>
+<p>运行 hexo s –debug ，并访问 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> ，确保站点正确运行。</p>
+<p>第三步：配置</p>
+<p>选择 Scheme</p>
+<p>NexT 通过 Scheme 提供主题中的主题。 Mist 是 NexT 的第一款 Scheme。启用 Mist 仅需在 主题配置文件 中将 #scheme: Mist 前面的 # 注释去掉即可。</p>
+<p>语言设置</p>
+<p>编辑 站点配置文件，将 language 设置成你所需要的语言。</p>
+<p>例如选用正体中文，则配置为：</p>
+<p>language: zh-Hans<br>可用的语言如以下表格所示：</p>
+<p>语言    代码    设定值<br>English    en    language: en<br>简体中文    zh-Hans    language: zh-Hans<br>French    fr-FR    language: fr-FR<br>正体中文    zh-hk/zh-tw    language: zh-hk<br>Russian    ru    language: ru<br>German    de    language: de<br>菜单设置</p>
+<p>菜单配置在 主题配置文件的 menu 。 若你的站点运行在子目录中，请将链接前缀的 / 去掉。默认支持的菜单项有：</p>
+<p>键值    设定值    comment<br>home    home: /    主页<br>archives    archives: /archives    归档页<br>categories    categories: /categories    分类页（需手动创建）<br>tags    tags: /tags    标签页（需手动创建）<br>about    about: /about    关于页面 （需手动创建）<br>commonweal    commonweal: /404.html    公益 404 （需手动创建）<br>菜单示例配置：</p>
+<p>menu:<br>  home: /<br>  archives: /archives</p>
+<p>  #about: /about</p>
+<p>  #categories: /categories<br>  tags: /tags</p>
+<p>  #commonweal: /404.html<br>侧栏设置</p>
+<p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示。可以通过修改 主题配置文件 中的 sidebar 字段来控制侧栏的行为。</p>
+<p>支持的选项有：</p>
+<p>post - 默认行为，在文章页面（拥有目录列表）时显示<br>always - 在所有页面中都显示<br>hide - 在所有页面中都隐藏（可以手动展开）<br>侧栏示例配置：</p>
+<p>sidebar: post<br>头像设置</p>
+<p>编辑 站点配置文件，新增字段 avatar ， 值设置成头像的链接地址。</p>
+<p>其中，头像的链接地址可以是：</p>
+<p>地址    值<br>完整的互联网 URL    <a href="https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460" target="_blank" rel="external">https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460</a><br>站点内的地址    /uploads/avatar.jpg - 需要将你的头像图片放置在 站点的 source/uploads/ （可能需要新建uploads目录）<br>/images/avatar.jpg - 需要将你的头像图片放置在 主题的 source/images/ 目录下<br>头像设置示例：</p>
+<p>avatar: <a href="https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460" target="_blank" rel="external">https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460</a><br>作者名称</p>
+<p>编辑 站点配置文件，设置 author 为你的昵称。</p>
+<p>站点描述设置</p>
+<p>编辑 站点配置文件，设置 description 字段为你的站点描述。站点描述可以是你喜欢的一句签名:)</p>
+<p>总结</p>
+<p>到这里整个主题更换和配置就已经完成，现在可以看到博客已经成为预期的样子了。如果更换其它的主题，也大同小异，都是这三步，只是涉及到具体的配置就有些区别而已。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/06/16/hexo博客更换主题/" data-id="cj3zlck2b0000isqyhwvooc5j" class="article-share-link">Share</a>
       
       
     </footer>
@@ -106,9 +329,23 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo搭建博客-GitHub/">Hexo搭建博客,GitHub</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Hexo搭建博客-GitHub/" style="font-size: 10px;">Hexo搭建博客,GitHub</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -128,6 +365,14 @@
         
           <li>
             <a href="/2017/06/16/你好，亲爱滴宝贝！/">你好，亲爱滴宝贝！</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/16/手把手教从零开始在GitHub上使用Hexo搭建博客教程一/">手把手教从零开始在GitHub上使用Hexo搭建博客教程一</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/16/hexo博客更换主题/">hexo博客更换主题</a>
           </li>
         
       </ul>
