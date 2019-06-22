@@ -1,6 +1,4 @@
-### 简介
-
-欢迎来到eggslovebaby的博客！
+### 欢迎来到eggslovebaby的博客！
 
 ### 博客分类
 
