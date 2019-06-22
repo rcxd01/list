@@ -12,7 +12,7 @@
 另外，如果想看文章列表，[点击这里跳转到Issues查看](https://github.com/rcxd01/rcxd01.github.io/issues)
 
 ### 关于我
-微博：
-youtube：
-微信群：
+* [微博](https://github.com/rcxd01/rcxd01.github.io/projects/1)
+* [youtube](https://github.com/rcxd01/rcxd01.github.io/projects/1)
+* [微信群](https://github.com/rcxd01/rcxd01.github.io/projects/1)
 
