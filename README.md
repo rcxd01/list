@@ -1,6 +1,6 @@
 ### 欢迎来到eggslovebaby的博客:blush:
 
-### 博客分类
+### 网站地图
 博客主要划分为下面几大类别，可以点击进入：
 
 [教程知识](https://github.com/rcxd01/rcxd01.github.io/projects/1)
@@ -25,7 +25,7 @@
 
 *******************
 
-## 我在这里
+## 这里关注动态更新
 
 |Follow Me|
 |---|
